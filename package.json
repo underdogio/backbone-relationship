@@ -1,0 +1,43 @@
+{
+  "name": "backbone-relationship",
+  "description": "Backbone plugin that coerces attributes to models and collections",
+  "version": "1.0.0",
+  "homepage": "https://github.com/underdogio/backbone-relationship",
+  "author": {
+    "name": "Todd Wolfson",
+    "email": "todd@twolfson.com",
+    "url": "http://twolfson.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/underdogio/backbone-relationship.git"
+  },
+  "bugs": {
+    "url": "https://github.com/underdogio/backbone-relationship/issues"
+  },
+  "license": "MIT",
+  "main": "lib/backbone-relationship",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+    "precheck": "twolfson-style precheck lib/ test/",
+    "lint": "twolfson-style lint lib/ test/",
+    "pretest": "twolfson-style install",
+    "test": "npm run precheck && mocha --reporter dot && npm run lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jscs": "~1.7.3",
+    "jshint": "~2.5.10",
+    "mocha": "~1.11.0",
+    "twolfson-style": "~1.6.0"
+  },
+  "keywords": [
+    "backbone",
+    "plugin",
+    "relationship",
+    "relational",
+    "inheritance"
+  ]
+}
