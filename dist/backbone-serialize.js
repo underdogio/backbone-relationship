@@ -89,6 +89,11 @@ function BackboneRelationship(Backbone, _) {
         return __prepareModel.call(this, attrs, options);
       };
     }
+
+    // Return our extended class
+    // DEV: Even if we wanted, we cannot perform extension because we require `constructor` support.
+    //   Overriding `Backbone.Model's` constructor with a proxy wrapper would likely break `instanceof`
+    //   (e.g. `x instanceof Backbone.Model` would break)
     return klass.extend(mixins);
   }
 
