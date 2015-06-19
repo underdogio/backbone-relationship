@@ -1,0 +1,25 @@
+{
+  "name": "backbone-relationship",
+  "version": "1.0.0",
+  "homepage": "https://github.com/underdogio/backbone-relationship",
+  "authors": [
+    "Todd Wolfson <todd@twolfson.com>"
+  ],
+  "description": "Backbone plugin that coerces attributes to models and collections",
+  "main": "dist/browser.min.js",
+  "keywords": [
+    "backbone",
+    "plugin",
+    "relationship",
+    "relational",
+    "inheritance"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

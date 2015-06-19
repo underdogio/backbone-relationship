@@ -1,3 +1,4 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 // Define helpers for later on
 function isNonstrictSubclass(subclass, klass) {
   return subclass === klass || subclass.prototype instanceof klass;
@@ -88,11 +89,6 @@ function BackboneRelationship(Backbone, _) {
         return __prepareModel.call(this, attrs, options);
       };
     }
-
-    // Return our extended class
-    // DEV: Even if we wanted, we cannot perform extension because we require `constructor` support.
-    //   Overriding `Backbone.Model's` constructor with a proxy wrapper would likely break `instanceof`
-    //   (e.g. `x instanceof Backbone.Model` would break)
     return klass.extend(mixins);
   }
 
@@ -105,3 +101,9 @@ function BackboneRelationship(Backbone, _) {
 
 // Export our function
 exports.mixin = BackboneRelationship;
+
+},{}],2:[function(require,module,exports){
+// Load in our library and expose it to `window`
+window.BackboneRelationship = require('./backbone-relationship');
+
+},{"./backbone-relationship":1}]},{},[2]);
